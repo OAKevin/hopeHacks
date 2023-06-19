@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Page</title>
+    <script>
+        function signUp() {
+            const url = "http://localhost:5000/createUser"; // Replace with your API endpoint
+
+            // Get input values from the form
+            const name = document.getElementById("name").value;
+            const password = document.getElementById("password").value;
+
+            // Create the request body
+            const data = {
+                name: name,
+                password: password
+            };
+
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("User created successfully!");
+                } else {
+                    console.log("Failed to create user");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Signup Page</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="button" value="Sign Up" onclick="signUp()">
+    </form>
+</body>
+</html>
