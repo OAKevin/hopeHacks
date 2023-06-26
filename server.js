@@ -95,3 +95,41 @@ app.post("/login", (req, res)=> {
      }) //end of connection.query()
     }) //end of db.connection()
     }) //end of app.post()
+    // UPDATE USER
+    app.put("/updateUser", async (req, res) => {
+        const newPassword = req.body.password;
+        const userName = req.body.user;
+      
+        db.getConnection(async (err, connection) => {
+          if (err) throw err;
+      
+          // Check if the user exists
+          const searchQuery = "SELECT * FROM usersDB.userTable WHERE User = ?";
+          const searchParams = [userName];
+      
+          await connection.query(searchQuery, searchParams, async (err, result) => {
+            if (err) throw err;
+      
+            if (result.length === 0) {
+              connection.release();
+              console.log("User does not exist");
+              res.sendStatus(404);
+            } else {
+              // Update password
+              const hashedPassword = await bcrypt.hash(newPassword, 10);
+      
+              const updateQuery = "UPDATE usersDB.userTable SET password = ? WHERE User = ?";
+              const updateParams = [hashedPassword, userName];
+      
+              await connection.query(updateQuery, updateParams, (err, result) => {
+                connection.release();
+      
+                if (err) throw err;
+      
+                console.log("Password updated successfully");
+                res.sendStatus(200);
+              });
+            }
+          });
+        });
+      });

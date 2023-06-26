@@ -1,0 +1,248 @@
+body {
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
+    height: 100%;
+  }
+
+  .header {
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
+  .footer {
+    bottom: 0;
+  }
+  /* /////// HOMEPG NAV /////// */
+.navbar {
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-list {
+  display: inline-block;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 25px;
+  display: inline-block;
+  justify-content: center;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navbar-item a:hover {
+  background-color: #0f52ff;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 0.6s;
+}
+
+.hero-box{
+  width: 50%;
+  margin-top: 200px;
+}
+
+.hero-box .hero-heading{
+  color: white;
+  font-size: 50px;
+  line-height: 65px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-box .hero-subheading{
+  color: white;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-box .hero-desc{
+  color: white;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 30px 0;
+
+}
+
+.hero-box .btn-box{
+  margin-top: 60px;
+}
+
+.hero-box .cta-btn{
+  background: white;
+  margin-right: 30px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  color: grey;
+}
+
+.hero-box .cta-btn:hover{
+  background: rgba(2555,2555,255, 0.2);
+}
+
+.btn-login{
+  color: white;
+  margin-left: 20px;
+  padding: 10px 25px;
+  line-height: 2rem;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+.btn-login:hover{
+  background-color: #0f52ff;
+  border-radius: 40px;
+  padding: 8px 20px;
+  transition: 0.6s;
+}
+
+.btn-signup{
+  color: white;
+  margin-left: 20px;
+  padding: 10px 25px;
+  line-height: 2rem;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+.btn-signup:hover{
+  background-color: #0f52ff;
+  border-radius: 40px;
+  padding: 8px 20px;
+  transition: 0.6s;
+}
+
+
+/* RESOURCES PAGE */
+.rs-header {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 6rem;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+
+/* LOGIN PAGE */
+.name {
+  color: white;
+  height: 10px;
+  align-items: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+.password {
+  color: white;
+  height: 10px;
+  align-items: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+
+/* SIGNUP PAGE */
+.name {
+  color: white;
+  height: 10px;
+  align-items: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+.password {
+  color: white;
+  height: 10px;
+  align-items: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+
+/* CONTACT PAGE */
+
+.contactTitle {
+  display: inline-block;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  display: inline-block;
+  margin-top: 15rem;
+  width: 100%;
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
+  box-shadow: 0 0 20px 0 #999;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+form .input-field {
+  width: 500px;
+  height: 40px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  display: block;
+  border: 1px solid #0f52ff;
+  border-radius: 14px;
+}
+
+.textarea-field {
+  height: 150px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  display: block;
+}
+
+.btn {
+  background-color: #0f52ff;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: rgb(33,0,77);
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s;
+}
+/* /// End of Contact Page */

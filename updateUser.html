@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update User</title>
+  <script>
+    function updateUser() {
+        const url = "http://localhost:5000/updateUser"; // Replace with your API endpoint
+
+        // Get input values from the form
+        const user = document.getElementById("user").value;
+        const password = document.getElementById("password").value;
+
+        // Create the request body
+        const data = {
+            user: user,
+            password: password
+        };
+
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log("User created successfully!");
+            } else {
+                console.log("Failed to create user");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+</script>
+</head>
+<body>
+  <h1>Update User</h1>
+  <form action="/updateUser" method="PUT">
+    <label for="password">New Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    
+    <label for="user">New User:</label>
+    <input type="text" id="user" name="user"><br><br>
+    
+    <input type="submit" value="Update User" onclick="updateUser()">
+  </form>
+</body>
+</html>
