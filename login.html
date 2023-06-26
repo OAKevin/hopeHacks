@@ -9,6 +9,12 @@
             // Get input values from the form
             const name = document.getElementById("name").value;
             const password = document.getElementById("password").value;
+            
+            // Verify that the fields are correctly filled
+            if (!name || !password) {
+                alert("Please fill in all fields");
+                return;
+            }
 
             // Create the request body
             const data = {
@@ -29,13 +35,16 @@
                     window.location.href = "index.html"; 
                 } else {
                     console.log("Check credentials");
-                    alert("Check credentials")
+                    alert("Check credentials");
                 }
             })
             .catch(error => {
                 console.error("Error:", error);
             });
         }
+        function redirectToIndex() {
+    window.location.href = "updateUser.html";
+  }
     </script>
 </head>
 <body>
@@ -48,6 +57,7 @@
         <input type="password" id="password" name="password" required><br>
 
         <input type="button" value="Login" onclick="login()">
+        <button type="button" onclick="redirectToIndex()">Reset Password</button>
     </form>
 </body>
 </html>

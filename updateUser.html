@@ -25,9 +25,12 @@
         })
         .then(response => {
             if (response.ok) {
-                console.log("User created successfully!");
+                console.log("User updated successfully!");
+                alert("User updated successfully!");
+                window.location.href = "login.html"; 
             } else {
-                console.log("Failed to create user");
+                console.log("Failed to update user");
+                alert("Failed to update user");
             }
         })
         .catch(error => {
