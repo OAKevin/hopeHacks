@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="style.css" />
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <title>Signup Page</title>
     <script>
         function signUp() {
@@ -39,15 +52,39 @@
     </script>
 </head>
 <body>
+    <header class="header">
+        <!-- <div class="logo">
+            <img src="/IMG/luxury-logo.jpeg" alt="">
+          </div> -->
+        <nav class="navbar">
+          <ul>
+            <li class="navbar-item"><a href="index.html">Home</a></li>
+            <li class="navbar-item"><a href="resources.html">Resources</a></li>
+            <li class="navbar-item"><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br>
     <h1>Signup Page</h1>
     <form>
-        <label for="name">Name:</label>
+        <label for="name" class="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
 
-        <label for="password">Password:</label>
+        <label for="password"class="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <input type="button" value="Sign Up" onclick="signUp()">
+        <input type="button" value="Sign Up" class="btn" onclick="signUp()">
     </form>
+    <section class="footer">
+        <footer>
+      <div class="social-media">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+      </div>
+        </footer>
+    </section>
 </body>
 </html>

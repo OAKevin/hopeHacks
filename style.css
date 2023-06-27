@@ -165,8 +165,44 @@ background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
   padding: 15px;
   justify-content: right;
 }
+/*  */
+* {
+  box-sizing: border-box;
+}
 
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100%;
+}
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1180px) {
+  .column {
+      width: 100%;
+  }
+  .a {
+      font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .column {
+      width: 100%;
+  }
+ 
+  * {
+      font-size: 14px;
+  }
+  
+}
+/*  */
 /* LOGIN PAGE */
 .name {
   color: white;
