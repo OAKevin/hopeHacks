@@ -16,9 +16,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
     align-items: center;
     z-index: 100;
   }
-  .footer {
-    bottom: 0;
-  }
+  
   /* /////// HOMEPG NAV /////// */
 .navbar {
   padding: 0;
@@ -46,10 +44,15 @@ background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
 }
 
 .navbar-item a:hover {
-  background-color: #0f52ff;
+  background-color: rgb(99, 6, 220);
+  color: black;
   border-radius: 20px;
   padding: 10px;
   transition: 0.6s;
+}
+
+.heroHolder {
+  margin: 5%;
 }
 
 .hero-box{
@@ -141,6 +144,29 @@ background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
 }
 
 
+.input-search {
+  width: 70%;
+  height: 50px;
+  margin-left: 5%;
+  padding: 10px;
+  justify-content: space-between;
+  display: block;
+  border: 1px solid #0f52ff;
+  border-radius: 14px;
+}
+
+.btn-search {
+  background-color: #0f52ff;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 15px;
+  margin: 20px;
+  margin-left: 80%;
+  padding: 15px;
+  justify-content: right;
+}
+
+
 /* LOGIN PAGE */
 .name {
   color: white;
@@ -178,9 +204,9 @@ background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
 
 
 /* CONTACT PAGE */
-
 .contactTitle {
-  display: inline-block;
+  margin-top: 5%;
+  display: flex;
   justify-content: center;
   font-size: 2rem;
   padding: 20px;
@@ -201,7 +227,7 @@ form {
   width: 100%;
   background: rgb(0,0,0);
 background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
-  box-shadow: 0 0 20px 0 #999;
+  /* box-shadow: 0 0 20px 0 #999; */
   position: fixed;
   align-items: center;
   justify-content: center;
@@ -211,9 +237,10 @@ background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(57,0,98,1) 100%);
 form .input-field {
   width: 500px;
   height: 40px;
-  align-items: center;
-  margin-top: 20px;
+  margin: 10px;
+  margin-left: 25%;
   padding: 10px;
+  justify-content: space-between;
   display: block;
   border: 1px solid #0f52ff;
   border-radius: 14px;
@@ -231,8 +258,9 @@ form .input-field {
   background-color: #0f52ff;
   color: #fff;
   font-family: Georgia, "Times New Roman", Times, serif;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px;
+  margin-right: 10%;
   padding: 10px;
   text-align: center;
   align-items: center;
@@ -246,3 +274,46 @@ form .input-field {
   transition: 0.5s;
 }
 /* /// End of Contact Page */
+
+
+/* FOOTER */
+.footer {
+  bottom: 0%;
+  padding: 30px;
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .main-footer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+} */
+
+.footer-logo img {
+  width: 60px;
+  height: 80px;
+  padding-left: 105px;
+  justify-content: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  color: rgb(99, 6, 220);
+  transition: color 0.2s ease-in-out;
+}
+.social-media a:hover {
+  color: #0f52ff;
+}
+.social-media i {
+  font-size: 20px;
+}
