@@ -13,12 +13,12 @@
             const url = "http://localhost:5000/updateUser"; // Replace with your API endpoint
 
             // Get input values from the form
-            const name = document.getElementById("name").value;
+            const user= document.getElementById("user").value;
             const password = document.getElementById("password").value;
 
             // Create the request body
             const data = {
-                name: name,
+                user: user,
                 password: password
             };
 
@@ -32,7 +32,7 @@
             .then(response => {
                 if (response.ok) {
                     console.log("User updated successfully!");
-                    window.location.href = "index.html";
+                    window.location.href = "login.html";
                 } else {
                     console.log("Failed to update user");
                     alert("Failed to update user");
@@ -43,6 +43,9 @@
                 console.error("Error:", error);
             });
         }
+        function redirectToIndex() {
+    window.location.href = "Index.html";
+  }
   
     </script>
 </head>
@@ -60,11 +63,11 @@
     <h1>Update User</h1>
     <form action="/updateUser" method="PUT">
         <label for="user" class="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name"class="input-resource"><br><br>
         <label for="password" class="password">New Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" class="btn" value="Update User" onclick="updateUser()">
-        <button type="button" class="btn" onclick="redirectToIndex()">Go to Homepage</button>
+        <input type="password" id="password" class="input-resource"name="password"><br><br>
+        <button type="button" class="btn-login" value="Update User" onclick="updateUser()">Reset password</button>
+        <button type="button" class="btn-login" onclick="redirectToIndex()">Go to Homepage</button>
     </form>
     <section class="footer">
         <footer>
